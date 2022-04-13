@@ -1,0 +1,44 @@
+::before,
+::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$fontDark: rgb(34, 34, 39);
+$fontHover: rgb(27, 158, 27);
+
+body {
+    background-color: rgb(241, 238, 227);
+    height: 100vh;
+}
+
+nav {
+
+    margin: auto;
+    width: 50%;
+    margin-top: 3rem;
+
+    ul {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: $fontDark;
+        
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: $fontDark;
+    }
+}
