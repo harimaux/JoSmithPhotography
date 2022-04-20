@@ -14,7 +14,7 @@ body {
 
 nav {
   margin: auto;
-  width: 50%;
+  width: 40%;
   margin-top: 3rem;
 }
 
@@ -41,5 +41,36 @@ nav a {
 nav a:hover {
   text-decoration: underline;
   color: #222227;
+}
+
+/* HOME PAGE */
+.homeFrontImage {
+  width: 80%;
+  margin: auto;
+}
+
+.homeFrontImage img {
+  width: 100%;
+}
+
+.homeFrontImageBottom {
+  width: 80%;
+  margin: auto;
+}
+
+.homeFrontImageBottom img {
+  width: 100%;
+}
+
+.homeGalleryContainer {
+  width: 80%;
+}
+
+.homeGalleryContainer img {
+  width: 100%;
+}
+
+.homeGallerybottomRow {
+  margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

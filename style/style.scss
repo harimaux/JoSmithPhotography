@@ -17,7 +17,7 @@ body {
 nav {
 
     margin: auto;
-    width: 50%;
+    width: 40%;
     margin-top: 3rem;
 
     ul {
@@ -41,4 +41,36 @@ nav {
         text-decoration: underline;
         color: $fontDark;
     }
+}
+
+/* HOME PAGE */
+
+.homeFrontImage {
+    width: 80%;
+    margin: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.homeFrontImageBottom {
+    width: 80%;
+    margin: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.homeGalleryContainer {
+    width: 80%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.homeGallerybottomRow {
+    margin-top: 1.5rem;
 }
