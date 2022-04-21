@@ -127,6 +127,13 @@ nav {
     }
 }
 
+footer {
+    min-height: 300px;
+    width: 100%;
+    background-color: rgb(211, 211, 211);
+    line-height: 0.5;
+}
+
 /* HOME PAGE */
 
 .homeFrontImage {
@@ -152,13 +159,10 @@ nav {
 
     img {
         width: 100%;
+        transition: 1s ease-in-out;
     }
-}
 
-.homeGallerybottomRow {
-    margin-top: 1.5rem;
-}
-
-.homeCard {
-    border-radius: 3px;
+    img:hover {
+        filter: contrast(1.5) saturate(1.5) drop-shadow(0px 0px 20px #aa9865);
+    }
 }

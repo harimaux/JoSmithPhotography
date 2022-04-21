@@ -131,6 +131,13 @@ nav a:hover {
   background-color: lightgray;
 }
 
+footer {
+  min-height: 300px;
+  width: 100%;
+  background-color: lightgray;
+  line-height: 0.5;
+}
+
 /* HOME PAGE */
 .homeFrontImage {
   width: 80%;
@@ -156,13 +163,12 @@ nav a:hover {
 
 .homeGalleryContainer img {
   width: 100%;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
-.homeGallerybottomRow {
-  margin-top: 1.5rem;
-}
-
-.homeCard {
-  border-radius: 3px;
+.homeGalleryContainer img:hover {
+  -webkit-filter: contrast(1.5) saturate(1.5) drop-shadow(0px 0px 20px #aa9865);
+          filter: contrast(1.5) saturate(1.5) drop-shadow(0px 0px 20px #aa9865);
 }
 /*# sourceMappingURL=style.css.map */
