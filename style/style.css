@@ -7,15 +7,26 @@
           box-sizing: border-box;
 }
 
+/* $bodyBackground: rgb(241, 238, 227); */
 body {
-  background-color: #f1eee3;
+  background-color: #f3f2f0;
   height: 100vh;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
 }
 
 nav {
   margin: auto;
-  width: 40%;
-  margin-top: 3rem;
+  width: 50%;
+  margin-top: 1rem;
 }
 
 nav ul {
@@ -35,12 +46,89 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #222227;
+  color: #636363;
 }
 
 nav a:hover {
   text-decoration: underline;
-  color: #222227;
+  color: #636363;
+}
+
+.navBtn {
+  display: none;
+}
+
+@media screen and (max-width: 1205px) {
+  .navBtn {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .navBtn div {
+    width: 40px;
+    height: 4px;
+    background-color: #636363;
+    margin: 0.3rem;
+    border-radius: 2px;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  nav {
+    margin: unset;
+    width: unset;
+    margin-top: 0;
+  }
+  nav ul {
+    width: unset;
+    padding-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: rgba(49, 49, 49, 0.856);
+    width: 60%;
+    height: 80%;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  nav li {
+    list-style: none;
+    line-height: 5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: lightgray;
+  }
+  nav a:hover {
+    text-decoration: underline;
+    color: lightgray;
+  }
+}
+
+.navToggle {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.navBtnColorToggle div {
+  background-color: lightgray;
 }
 
 /* HOME PAGE */
@@ -72,5 +160,9 @@ nav a:hover {
 
 .homeGallerybottomRow {
   margin-top: 1.5rem;
+}
+
+.homeCard {
+  border-radius: 3px;
 }
 /*# sourceMappingURL=style.css.map */

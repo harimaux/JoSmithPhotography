@@ -6,19 +6,29 @@
     box-sizing: border-box;
 }
 
-$fontDark: rgb(34, 34, 39);
+$fontDark: rgb(99, 99, 99);
 $fontHover: rgb(27, 158, 27);
+$fontLight: rgb(211, 211, 211);
+$menuBackground: rgba(49, 49, 49, 0.856);
+/* $bodyBackground: rgb(241, 238, 227); */
+$bodyBackground: rgb(243, 242, 240);
 
 body {
-    background-color: rgb(241, 238, 227);
+    background-color: $bodyBackground;
     height: 100vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 nav {
 
     margin: auto;
-    width: 40%;
-    margin-top: 3rem;
+    width: 50%;
+    margin-top: 1rem;
 
     ul {
         width: 100%;
@@ -34,12 +44,86 @@ nav {
     a {
         text-decoration: none;
         color: $fontDark;
-        
+
     }
 
     a:hover {
         text-decoration: underline;
         color: $fontDark;
+    }
+}
+
+.navBtn {
+    display: none;
+}
+
+@media screen and (max-width: 1205px) {
+
+    .navBtn {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        z-index: 10;
+
+        div {
+            width: 40px;
+            height: 4px;
+            background-color: $fontDark;
+            margin: 0.3rem;
+            border-radius: 2px;
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    nav {
+
+        margin: unset;
+        width: unset;
+        margin-top: 0;
+
+        ul {
+            width: unset;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: $menuBackground;
+            width: 60%;
+            height: 80%;
+            transform: translateY(-100%);
+            transition: 0.5s ease-in-out;
+        }
+
+        li {
+            list-style: none;
+            line-height: 5rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $fontLight;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: $fontLight;
+        }
+    }
+}
+
+.navToggle {
+    transform: translateY(0);
+}
+
+.navBtnColorToggle {
+    div {
+        background-color: $fontLight;
     }
 }
 
@@ -73,4 +157,8 @@ nav {
 
 .homeGallerybottomRow {
     margin-top: 1.5rem;
+}
+
+.homeCard {
+    border-radius: 3px;
 }
