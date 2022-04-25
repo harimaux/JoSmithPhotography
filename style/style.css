@@ -11,6 +11,7 @@
 body {
   background-color: #f3f2f0;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -23,6 +24,7 @@ body {
   padding-top: 1rem;
 }
 
+/* ----------- NAVIGATION ----------- */
 nav {
   margin: auto;
   width: 50%;
@@ -61,7 +63,7 @@ nav a:hover {
 @media screen and (max-width: 1205px) {
   .navBtn {
     display: block;
-    position: absolute;
+    position: fixed;
     right: 1rem;
     top: 1rem;
     cursor: pointer;
@@ -131,6 +133,7 @@ nav a:hover {
   background-color: lightgray;
 }
 
+/* ----------- FOOTER ----------- */
 footer {
   min-height: 300px;
   width: 100%;
@@ -138,7 +141,7 @@ footer {
   line-height: 0.5;
 }
 
-/* HOME PAGE */
+/* ----------- HOME PAGE ----------- */
 .homeFrontImage {
   width: 80%;
   margin: auto;
@@ -172,6 +175,7 @@ footer {
           filter: contrast(1.5) saturate(1.5) drop-shadow(0px 0px 20px #aa9865);
 }
 
+/* ----------- GALLERY PAGE ----------- */
 .galleryGrid {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -190,6 +194,17 @@ footer {
 .galleryGrid img {
   height: 100%;
   width: 100%;
+  -webkit-transition: 1.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+}
+
+.galleryGrid img:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.galleryGrid a {
+  overflow: hidden;
 }
 
 .galleryDiv1 {
@@ -310,5 +325,77 @@ footer {
   -ms-grid-column: 5;
   -ms-grid-column-span: 2;
   grid-area: 9 / 5 / 13 / 7;
+}
+
+@media screen and (max-width: 992px) {
+  .galleryGrid {
+    width: 95%;
+  }
+}
+
+/* ----------- TESTIMONIALS PAGE ----------- */
+.tesText1,
+.tesText2,
+.tesText3 {
+  position: relative;
+  height: 100%;
+}
+
+.tesText1Background,
+.tesText1Background3 {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+}
+
+.tesText1Background2 {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+}
+
+.tesTextContent1,
+.tesTextContent3 {
+  width: 100%;
+  height: 616px;
+  padding: 4rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f3f2f0), to(rgba(34, 51, 68, 0)));
+  background-image: linear-gradient(to right, #f3f2f0, rgba(34, 51, 68, 0));
+}
+
+.tesTextContent1 h4,
+.tesTextContent3 h4 {
+  width: 600px;
+}
+
+.tesTextContent1 p,
+.tesTextContent3 p {
+  width: 600px;
+}
+
+.tesTextContent2 {
+  width: 100%;
+  height: 616px;
+  padding: 4rem;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f3f2f0), to(rgba(34, 51, 68, 0)));
+  background-image: linear-gradient(to left, #f3f2f0, rgba(34, 51, 68, 0));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.tesTextContent2 h4 {
+  width: 600px;
+}
+
+.tesTextContent2 p {
+  width: 600px;
 }
 /*# sourceMappingURL=style.css.map */

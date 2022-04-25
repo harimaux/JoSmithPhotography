@@ -16,6 +16,7 @@ $bodyBackground: rgb(243, 242, 240);
 body {
     background-color: $bodyBackground;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -23,6 +24,8 @@ body {
     justify-content: center;
     padding-top: 1rem;
 }
+
+/* ----------- NAVIGATION ----------- */
 
 nav {
 
@@ -61,7 +64,7 @@ nav {
 
     .navBtn {
         display: block;
-        position: absolute;
+        position: fixed;
         right: 1rem;
         top: 1rem;
         cursor: pointer;
@@ -127,6 +130,8 @@ nav {
     }
 }
 
+/* ----------- FOOTER ----------- */
+
 footer {
     min-height: 300px;
     width: 100%;
@@ -134,7 +139,7 @@ footer {
     line-height: 0.5;
 }
 
-/* HOME PAGE */
+/* ----------- HOME PAGE ----------- */
 
 .homeFrontImage {
     width: 80%;
@@ -167,6 +172,8 @@ footer {
     }
 }
 
+/* ----------- GALLERY PAGE ----------- */
+
 .galleryGrid {
 
     padding-top: 2rem;
@@ -183,6 +190,15 @@ footer {
     img {
         height: 100%;
         width: 100%;
+        transition: 1.5s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.02);
+    }
+
+    a {
+        overflow: hidden;
     }
 }
     
@@ -201,4 +217,68 @@ footer {
 .galleryDiv13 { grid-area: 9 / 3 / 11 / 5; }
 .galleryDiv14 { grid-area: 11 / 3 / 13 / 5; }
 .galleryDiv15 { grid-area: 9 / 5 / 13 / 7; }
+
+@media screen and (max-width: 992px) {
+
+    .galleryGrid {
+        width: 95%;
+    }
+
+}
+
+/* ----------- TESTIMONIALS PAGE ----------- */
+
+.tesText1,
+.tesText2,
+.tesText3 {
+    position: relative;
+    height: 100%;
+}
+
+.tesText1Background,
+.tesText1Background3 {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+}
+
+.tesText1Background2 {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+
+.tesTextContent1,
+.tesTextContent3 {
+    width: 100%;
+    height: 616px;
+    padding: 4rem;
+    background-image: linear-gradient(to right, rgb(243, 242, 240), rgba(34, 51, 68, 0));
+
+    h4 {
+        width: 600px;
+    }
+
+    p {
+        width: 600px;
+    }
+}
+
+.tesTextContent2 {
+    width: 100%;
+    height: 616px;
+    padding: 4rem;
+    background-image: linear-gradient(to left, rgb(243, 242, 240), rgba(34, 51, 68, 0));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    h4 {
+        width: 600px;
+    }
+
+    p {
+        width: 600px;
+    }
+}
 
