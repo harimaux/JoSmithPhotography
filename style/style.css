@@ -341,6 +341,11 @@ footer {
   height: 100%;
 }
 
+.tesText2 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .tesText1Background,
 .tesText1Background3 {
   position: absolute;
@@ -356,46 +361,99 @@ footer {
 
 .tesTextContent1,
 .tesTextContent3 {
-  width: 100%;
+  width: 70%;
   height: 616px;
-  padding: 4rem;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f3f2f0), to(rgba(34, 51, 68, 0)));
-  background-image: linear-gradient(to right, #f3f2f0, rgba(34, 51, 68, 0));
+  padding: 5rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(rgba(34, 51, 68, 0)));
+  background-image: linear-gradient(to right, black, rgba(34, 51, 68, 0));
+  color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tesTextContent1 h4,
 .tesTextContent3 h4 {
-  width: 600px;
+  width: 300px;
 }
 
 .tesTextContent1 p,
 .tesTextContent3 p {
-  width: 600px;
+  width: 300px;
 }
 
 .tesTextContent2 {
-  width: 100%;
+  width: 70%;
   height: 616px;
-  padding: 4rem;
-  background-image: -webkit-gradient(linear, right top, left top, from(#f3f2f0), to(rgba(34, 51, 68, 0)));
-  background-image: linear-gradient(to left, #f3f2f0, rgba(34, 51, 68, 0));
+  padding: 5rem;
+  background-image: -webkit-gradient(linear, right top, left top, from(black), to(rgba(253, 253, 253, 0)));
+  background-image: linear-gradient(to left, black, rgba(253, 253, 253, 0));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  margin-left: auto;
+  color: lightgray;
 }
 
 .tesTextContent2 h4 {
-  width: 600px;
+  width: 300px;
 }
 
 .tesTextContent2 p {
-  width: 600px;
+  width: 300px;
+}
+
+.tesTextFrame {
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 1rem;
+  max-height: 370px;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.tesTextAnime1,
+.tesTextAnime2 {
+  -webkit-transform: translateY(80px);
+          transform: translateY(80px);
+  opacity: 0;
+}
+
+.tesTextAnimeInit {
+  -webkit-animation: tesInit 1s ease-in-out;
+          animation: tesInit 1s ease-in-out;
+}
+
+@-webkit-keyframes tesInit {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes tesInit {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

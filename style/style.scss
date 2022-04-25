@@ -235,6 +235,11 @@ footer {
     height: 100%;
 }
 
+.tesText2 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .tesText1Background,
 .tesText1Background3 {
     position: absolute;
@@ -250,35 +255,68 @@ footer {
 
 .tesTextContent1,
 .tesTextContent3 {
-    width: 100%;
+    width: 70%;
     height: 616px;
-    padding: 4rem;
-    background-image: linear-gradient(to right, rgb(243, 242, 240), rgba(34, 51, 68, 0));
+    padding: 5rem;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(34, 51, 68, 0));
+    color: $fontLight;
+    display: flex;
 
     h4 {
-        width: 600px;
+        width: 300px;
     }
 
     p {
-        width: 600px;
+        width: 300px;
     }
 }
 
 .tesTextContent2 {
-    width: 100%;
+    width: 70%;
     height: 616px;
-    padding: 4rem;
-    background-image: linear-gradient(to left, rgb(243, 242, 240), rgba(34, 51, 68, 0));
+    padding: 5rem;
+    background-image: linear-gradient(to left, rgb(0, 0, 0), rgba(253, 253, 253, 0));
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
+    flex-direction: column;
+    margin-left: auto;
+    color: $fontLight;
 
     h4 {
-        width: 600px;
+        width: 300px;
     }
 
     p {
-        width: 600px;
+        width: 300px;
     }
 }
 
+.tesTextFrame {
+    border: 1px solid $fontLight;
+    border-radius: 15px;
+    padding: 1rem;
+    max-height: 370px;
+    transition: 1s ease-in-out;
+}
+
+.tesTextAnime1,
+.tesTextAnime2 {
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+.tesTextAnimeInit {
+    animation: tesInit 1s ease-in-out;
+}
+
+@keyframes tesInit {
+    0% {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
