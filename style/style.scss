@@ -10,6 +10,7 @@ $fontDark: rgb(99, 99, 99);
 $fontHover: rgb(27, 158, 27);
 $fontLight: rgb(211, 211, 211);
 $menuBackground: rgba(49, 49, 49, 0.856);
+$mobileMenuBars: rgb(202, 202, 202);
 /* $bodyBackground: rgb(241, 238, 227); */
 $bodyBackground: rgb(243, 242, 240);
 
@@ -68,16 +69,18 @@ nav {
         position: fixed;
         right: 1rem;
         top: 1rem;
+        background-color: rgba(243, 242, 240, 0.096);
         cursor: pointer;
         z-index: 10;
 
         div {
             width: 40px;
             height: 4px;
-            background-color: $fontDark;
+            background-color: $mobileMenuBars;
             margin: 0.3rem;
             border-radius: 2px;
             transition: 0.5s ease-in-out;
+            z-index: 15;
         }
     }
 
@@ -346,4 +349,40 @@ footer {
     .tesTextFrame {
         background-color: rgba(0, 0, 0, 0.808);
     }
+
+    .tesText1Background2 {
+        left: -220px;
+    }
+}
+
+/* ----------- PACKAGES PAGE ----------- */
+
+.pacContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+    background-color: rgba(0, 255, 255, 0.164);
+}
+
+.pacText {
+
+    display: flex;
+    justify-content: center;
+
+    div {
+        border: solid 2px $fontDark;
+        padding: 1rem;
+        border-radius: 15px;
+        width: 16%;
+        margin: 1rem;
+        /* background-color: rgba(211, 211, 211, 0.911); */
+    }
+}
+
+.pacBackground {
+    position: absolute;
+    z-index: -10;
+
 }

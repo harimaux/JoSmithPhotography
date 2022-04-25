@@ -68,17 +68,19 @@ nav a:hover {
     position: fixed;
     right: 1rem;
     top: 1rem;
+    background-color: rgba(243, 242, 240, 0.096);
     cursor: pointer;
     z-index: 10;
   }
   .navBtn div {
     width: 40px;
     height: 4px;
-    background-color: #636363;
+    background-color: #cacaca;
     margin: 0.3rem;
     border-radius: 2px;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+    z-index: 15;
   }
   nav {
     margin: unset;
@@ -490,5 +492,50 @@ footer {
   .tesTextFrame {
     background-color: rgba(0, 0, 0, 0.808);
   }
+  .tesText1Background2 {
+    left: -220px;
+  }
+}
+
+/* ----------- PACKAGES PAGE ----------- */
+.pacContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 900px;
+  background-color: rgba(0, 255, 255, 0.164);
+}
+
+.pacText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pacText div {
+  border: solid 2px #636363;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 16%;
+  margin: 1rem;
+  /* background-color: rgba(211, 211, 211, 0.911); */
+}
+
+.pacBackground {
+  position: absolute;
+  z-index: -10;
 }
 /*# sourceMappingURL=style.css.map */
