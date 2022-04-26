@@ -416,7 +416,7 @@ footer {
 
 .tesTextFrame {
   border: 1px solid lightgray;
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 1rem;
   max-height: 370px;
   -webkit-transition: 1s ease-in-out;
@@ -509,33 +509,67 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-height: 900px;
-  background-color: rgba(0, 255, 255, 0.164);
+  background-color: #fff0f0;
+  position: relative;
+}
+
+.pacContainer h2 {
+  z-index: 10;
+  color: lightgray;
+  margin-left: 2rem;
 }
 
 .pacText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: 10;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.74);
+  border-radius: 5px;
+  width: 600px;
 }
 
 .pacText div {
-  border: solid 2px #636363;
   padding: 1rem;
-  border-radius: 15px;
-  width: 16%;
-  margin: 1rem;
-  /* background-color: rgba(211, 211, 211, 0.911); */
+  color: lightgray;
+}
+
+.pacBackgroundContainer {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 .pacBackground {
+  position: relative;
+}
+
+.pacBackground div {
   position: absolute;
-  z-index: -10;
+}
+
+.pacGradient {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(199, 26, 161, 0.322)), to(rgba(43, 135, 177, 0.596)));
+  background-image: linear-gradient(to right, rgba(199, 26, 161, 0.322), rgba(43, 135, 177, 0.596));
+  width: 100%;
+  left: 0;
+  height: 900px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 700px) {
+  .pacText {
+    width: 400px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .pacGradient {
+    height: 100%;
+  }
+  .pacBackgroundContainer img {
+    width: unset;
+    height: 1025px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

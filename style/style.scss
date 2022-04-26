@@ -297,7 +297,7 @@ footer {
 
 .tesTextFrame {
     border: 1px solid $fontLight;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 1rem;
     max-height: 370px;
     transition: 1s ease-in-out;
@@ -361,28 +361,71 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     min-height: 900px;
-    background-color: rgba(0, 255, 255, 0.164);
-}
+    background-color: rgb(255, 240, 240);
+    position: relative;
 
-.pacText {
-
-    display: flex;
-    justify-content: center;
-
-    div {
-        border: solid 2px $fontDark;
-        padding: 1rem;
-        border-radius: 15px;
-        width: 16%;
-        margin: 1rem;
-        /* background-color: rgba(211, 211, 211, 0.911); */
+    h2 {
+        z-index: 10;
+        color: $fontLight;
+        margin-left: 2rem;
     }
 }
 
-.pacBackground {
-    position: absolute;
-    z-index: -10;
+.pacText {
+    z-index: 10;
+    margin: auto;
+    background-color:rgba(0, 0, 0, 0.74);
+    border-radius: 5px;
+    width: 600px;
 
+    div {
+        padding: 1rem;
+        color: $fontLight;
+    }
+}
+
+.pacBackgroundContainer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.pacBackground {
+    position: relative;
+
+    div {
+        position: absolute;
+    }
+}
+
+.pacGradient {
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(199, 26, 161, 0.322), rgba(43, 135, 177, 0.596));
+    width: 100%;
+    left: 0;
+    height: 900px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 700px) {
+
+    .pacText {
+        width: 400px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .pacGradient {
+        height: 100%;
+    }
+
+    .pacBackgroundContainer {
+
+        img {
+            width: unset;
+            height: 1025px;
+        }
+    }
 }

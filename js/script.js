@@ -29,22 +29,13 @@ window.addEventListener("scroll", () => {
 
 // Packages Cards
 
-$(".cards").hover(function () {
-  if ($(this).hasClass("card1")) {
-    $(".pacBackground").html("<img src='images/packages/pacBackground1.jpeg'>");
-  } else if ($(this).hasClass("card2")) {
-    $(".pacBackground").html("<img src='images/packages/pacBackground2.jpeg'>");
-  } else if ($(this).hasClass("card3")) {
-    $(".pacBackground").html("<img src='images/packages/pacBackground3.jpeg'>");
-  } else if ($(this).hasClass("card4")) {
-    $(".pacBackground").html("<img src='images/packages/pacBackground4.jpeg'>");
-  } else if ($(this).hasClass("card5")) {
-    $(".pacBackground").html("<img src='images/packages/pacBackground5.jpeg'>");
-  }
-});
+$(".pacBackground > div:gt(0)").hide();
 
-/* $(".cards").mouseleave(function () {
-  if ($(this).hasClass("cards")) {
-    $(".pacBackground").html("");
-  }
-}); */
+setInterval(function () {
+  $(".pacBackground > div:first")
+    .fadeOut(2500)
+    .next()
+    .fadeIn(2500)
+    .end()
+    .appendTo(".pacBackground");
+}, 4000);
