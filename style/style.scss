@@ -13,6 +13,8 @@ $menuBackground: rgba(49, 49, 49, 0.856);
 $mobileMenuBars: rgb(202, 202, 202);
 /* $bodyBackground: rgb(241, 238, 227); */
 $bodyBackground: rgb(243, 242, 240);
+/* $formBackground: rgb(60, 147, 153); */
+$formBackground: rgb(62, 111, 218);
 
 body {
     background-color: $bodyBackground;
@@ -24,6 +26,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+    transition: 1s ease-in-out;
 }
 
 /* ----------- NAVIGATION ----------- */
@@ -35,6 +38,7 @@ nav {
     margin-top: 1rem;
     position: relative;
     z-index: 100;
+    transition: 1s ease-in-out;
 
     ul {
         width: 100%;
@@ -101,8 +105,8 @@ nav {
             right: 0;
             top: 0;
             background-color: $menuBackground;
-            width: 60%;
-            height: 80%;
+            width: 300px;
+            height: 60%;
             transform: translateY(-100%);
             transition: 0.5s ease-in-out;
         }
@@ -266,8 +270,9 @@ footer {
     color: $fontLight;
     display: flex;
 
-    h4 {
+    h1 {
         width: 300px;
+        font-family: 'Square Peg', cursive;
     }
 
     p {
@@ -286,8 +291,9 @@ footer {
     margin-left: auto;
     color: $fontLight;
 
-    h4 {
+    h1 {
         width: 300px;
+        font-family: 'Square Peg', cursive;
     }
 
     p {
@@ -299,8 +305,16 @@ footer {
     border: 1px solid $fontLight;
     border-radius: 5px;
     padding: 1rem;
-    max-height: 370px;
+    max-height: auto;
     transition: 1s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tesTextFrameRight {
+    height: 456px;
 }
 
 .tesTextAnime1,
@@ -429,3 +443,145 @@ footer {
         }
     }
 }
+
+/* ---------- CONTACAT PAGE ----------- */
+
+.conContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.conLogo {
+    img {
+        width: 250px;
+        padding-bottom: 2rem;
+    }
+}
+
+.conAddress {
+    line-height: 12px;
+    border: solid 1px $fontDark;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 245px;
+}
+
+.conSocialMedia {
+    padding-top: 2rem;
+}
+
+.conModalContainer {
+    
+    z-index: 200;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.conInfo {
+
+    padding: 4rem;
+}
+
+.conMap {
+
+    padding: 4rem;
+
+    iframe {
+        width: 1000px;
+        height: 500px;
+        border: solid 5px $fontLight;
+        border-radius: 5px;
+    }
+}
+
+.conModalShadow {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.801);
+}
+
+.conBackground {
+    position: absolute;
+    z-index: -1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    z-index: 1;
+  
+    label {
+      margin-top: 1rem;
+      color: $fontLight;
+    }
+  
+    input {
+      padding: 0.5rem;
+      outline: none;
+      border: solid 1px $fontLight;
+      background-color: $formBackground;
+      color: $fontLight;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      border-radius: 5px;
+    }
+  
+    textarea {
+      height: 300px;
+      outline: none;
+      border: solid 1px $fontLight;
+      background-color: $formBackground;
+      color: $fontLight;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  
+    button {
+      width: 100px;
+      margin-top: 2rem;
+    }
+  }
+
+  #btnContact {
+      border: solid 1px $fontDark;
+  }
+
+  @media screen and (max-width: 1205px) {
+
+
+    .conInfo {
+
+        padding-top: 2rem;
+        margin: auto;
+    }
+    
+    .conMap {
+    
+        padding-top: 2rem;
+        margin: auto;
+    
+        iframe {
+            width: 500px;
+            height: 500px;
+        }
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+
+    .conMap {
+        iframe {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+  }

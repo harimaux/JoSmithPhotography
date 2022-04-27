@@ -7,27 +7,21 @@ document.querySelector("#navBtn").addEventListener("click", () => {
   document.querySelector("#navBtn").classList.toggle("navBtnColorToggle");
 });
 
-//Shows text on testimonials site
-
-const tesText1Box = document.querySelector(".tesTextAnime1");
-const tesText2Box = document.querySelector(".tesTextAnime2");
+/* const navBox = document.querySelector("nav");
+const logoBox = document.querySelector(".logo");
 
 window.addEventListener("scroll", () => {
-  const tesText1 = tesText1Box.getBoundingClientRect().top;
-  const tesText2 = tesText2Box.getBoundingClientRect().top;
+  const navPosition = navBox.getBoundingClientRect().top;
 
-  const objectOnScreenPosition = window.innerHeight / 1.5;
+  console.log(navPosition);
 
-  if (tesText1 < objectOnScreenPosition) {
-    tesText1Box.classList.remove("tesTextAnime1");
+  if (navPosition < 10) {
+    navBox.classList.add("navAlter");
+    logoBox.classList.add("logoHide");
   }
+}); */
 
-  if (tesText2 < objectOnScreenPosition) {
-    tesText2Box.classList.remove("tesTextAnime2");
-  }
-});
-
-// Packages Cards
+// Packages Cards Background Slideshow
 
 $(".pacBackground > div:gt(0)").hide();
 
@@ -39,3 +33,17 @@ setInterval(function () {
     .end()
     .appendTo(".pacBackground");
 }, 4000);
+
+//Contact modal
+
+const contactBtn = document.querySelector("#btnContact");
+const modalContainer = document.querySelector(".conModalContainer");
+const modalBox = document.querySelector(".conModalShadow");
+
+contactBtn.addEventListener("click", () => {
+  modalContainer.style.display = "flex";
+});
+
+modalBox.addEventListener("click", () => {
+  modalContainer.style.display = "none";
+});
