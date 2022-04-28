@@ -34,8 +34,6 @@ nav {
   margin-top: 1rem;
   position: relative;
   z-index: 100;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
 }
 
 nav ul {
@@ -121,7 +119,7 @@ nav a:hover {
   }
   nav li {
     list-style: none;
-    line-height: 5rem;
+    line-height: 4rem;
   }
   nav a {
     text-decoration: none;
@@ -608,15 +606,13 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .conLogo img {
-  width: 250px;
-  padding-bottom: 2rem;
+  width: 350px;
+  margin-top: 4rem;
 }
 
 .conAddress {
@@ -633,10 +629,17 @@ footer {
 
 .conModalContainer {
   z-index: 200;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   width: 100%;
   height: 100%;
-  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -645,19 +648,52 @@ footer {
           align-items: center;
 }
 
+.conModalContainerShow {
+  opacity: 1;
+  pointer-events: unset;
+}
+
 .conInfo {
-  padding: 4rem;
+  margin-top: 4rem;
 }
 
 .conMap {
-  padding: 4rem;
+  position: absolute;
+  margin-top: 600px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .conMap iframe {
-  width: 1000px;
-  height: 500px;
+  width: 1600px;
+  height: 650px;
   border: solid 5px lightgray;
   border-radius: 5px;
+}
+
+.conMapShow {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+@media screen and (max-width: 1620px) {
+  .conMap iframe {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .conMap iframe {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .conMap iframe {
+    width: 400px;
+  }
 }
 
 .conModalShadow {
@@ -668,10 +704,14 @@ footer {
 }
 
 .conBackground {
+  background-image: url("/images/contact/contact_background.jpg");
+  width: 100%;
+  height: 1320px;
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-position: center;
   position: absolute;
   z-index: -1;
-  width: 100%;
-  overflow: hidden;
 }
 
 form {
@@ -695,8 +735,8 @@ form input {
   padding: 0.5rem;
   outline: none;
   border: solid 1px lightgray;
-  background-color: #3e6fda;
-  color: lightgray;
+  background-color: #e7e9ec;
+  color: #636363;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   border-radius: 5px;
@@ -706,8 +746,8 @@ form textarea {
   height: 300px;
   outline: none;
   border: solid 1px lightgray;
-  background-color: #3e6fda;
-  color: lightgray;
+  background-color: #e7e9ec;
+  color: #636363;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 22px;
   padding: 1rem;
@@ -724,17 +764,15 @@ form button {
 }
 
 @media screen and (max-width: 1205px) {
+  .conBackground {
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-position: left;
+    position: absolute;
+  }
   .conInfo {
     padding-top: 2rem;
     margin: auto;
-  }
-  .conMap {
-    padding-top: 2rem;
-    margin: auto;
-  }
-  .conMap iframe {
-    width: 500px;
-    height: 500px;
   }
   form {
     width: 80%;

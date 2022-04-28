@@ -14,7 +14,7 @@ $mobileMenuBars: rgb(202, 202, 202);
 /* $bodyBackground: rgb(241, 238, 227); */
 $bodyBackground: rgb(243, 242, 240);
 /* $formBackground: rgb(60, 147, 153); */
-$formBackground: rgb(62, 111, 218);
+$formBackground: rgb(231, 233, 236);
 
 body {
     background-color: $bodyBackground;
@@ -38,7 +38,6 @@ nav {
     margin-top: 1rem;
     position: relative;
     z-index: 100;
-    transition: 1s ease-in-out;
 
     ul {
         width: 100%;
@@ -113,7 +112,7 @@ nav {
 
         li {
             list-style: none;
-            line-height: 5rem;
+            line-height: 4rem;
         }
 
         a {
@@ -454,13 +453,13 @@ footer {
 
 .conContainer {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
 }
 
 .conLogo {
     img {
-        width: 250px;
-        padding-bottom: 2rem;
+        width: 350px;
+        margin-top: 4rem;
     }
 }
 
@@ -477,30 +476,76 @@ footer {
 }
 
 .conModalContainer {
-    
     z-index: 200;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
     width: 100%;
     height: 100%;
-    display: none;
     justify-content: center;
     align-items: center;
 }
 
-.conInfo {
+.conModalContainerShow {
+    opacity: 1;
+    pointer-events: unset;
+}
 
-    padding: 4rem;
+.conInfo {
+    margin-top: 4rem;
 }
 
 .conMap {
 
-    padding: 4rem;
+    position: absolute;
+    margin-top: 600px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
 
     iframe {
-        width: 1000px;
-        height: 500px;
+        width: 1600px;
+        height: 650px;
         border: solid 5px $fontLight;
         border-radius: 5px;
+    }
+}
+
+.conMapShow {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+@media screen and (max-width: 1620px) {
+
+    .conMap {
+    
+        iframe {
+            width: 1200px;
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+
+    .conMap {
+    
+        iframe {
+            width: 900px;
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+
+    .conMap {
+    
+        iframe {
+            width: 400px;
+        }
     }
 }
 
@@ -512,10 +557,14 @@ footer {
 }
 
 .conBackground {
+    background-image: url('/images/contact/contact_background.jpg');
+    width: 100%;
+    height: 1320px;
+    background-repeat: no-repeat;
+    background-attachment: absolute;
+    background-position: center;
     position: absolute;
     z-index: -1;
-    width: 100%;
-    overflow: hidden;
 }
 
 form {
@@ -534,7 +583,7 @@ form {
       outline: none;
       border: solid 1px $fontLight;
       background-color: $formBackground;
-      color: $fontLight;
+      color: $fontDark;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 22px;
       border-radius: 5px;
@@ -545,7 +594,7 @@ form {
       outline: none;
       border: solid 1px $fontLight;
       background-color: $formBackground;
-      color: $fontLight;
+      color: $fontDark;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 22px;
       padding: 1rem;
@@ -564,22 +613,17 @@ form {
 
   @media screen and (max-width: 1205px) {
 
+    .conBackground {
+        background-repeat: no-repeat;
+        background-attachment: unset;
+        background-position: left;
+        position: absolute;
+    }
 
     .conInfo {
 
         padding-top: 2rem;
         margin: auto;
-    }
-    
-    .conMap {
-    
-        padding-top: 2rem;
-        margin: auto;
-    
-        iframe {
-            width: 500px;
-            height: 500px;
-        }
     }
 
     form {

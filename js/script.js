@@ -7,7 +7,7 @@ document.querySelector("#navBtn").addEventListener("click", () => {
   document.querySelector("#navBtn").classList.toggle("navBtnColorToggle");
 });
 
-/* const navBox = document.querySelector("nav");
+const navBox = document.querySelector("nav");
 const logoBox = document.querySelector(".logo");
 
 window.addEventListener("scroll", () => {
@@ -19,7 +19,7 @@ window.addEventListener("scroll", () => {
     navBox.classList.add("navAlter");
     logoBox.classList.add("logoHide");
   }
-}); */
+});
 
 // Packages Cards Background Slideshow
 
@@ -41,9 +41,14 @@ const modalContainer = document.querySelector(".conModalContainer");
 const modalBox = document.querySelector(".conModalShadow");
 
 contactBtn.addEventListener("click", () => {
-  modalContainer.style.display = "flex";
+  modalContainer.classList.add("conModalContainerShow");
 });
 
 modalBox.addEventListener("click", () => {
-  modalContainer.style.display = "none";
+  modalContainer.classList.remove("conModalContainerShow");
+});
+
+//Contact map
+document.querySelector("#btnMap").addEventListener("click", () => {
+  document.querySelector(".conMap").classList.toggle("conMapShow");
 });

@@ -19,22 +19,6 @@
 
 <body>
 
-    <div class="conModalContainer">
-
-        <div class="conModalShadow"></div>
-        <!-- modify this form HTML and place wherever you want your form -->
-        <form action="https://formspree.io/f/xknypbjq" method="POST">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email">
-
-                <label for="message">Message:</label>
-                <textarea name="message"></textarea>
-
-            <!-- your other form fields go here -->
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </div>
-
     <div class="logo">
         <img src="images/logos/jspLogoSmall.png" alt="">
     </div>
@@ -55,12 +39,11 @@
     </nav>
 
 
+    <div class="conBackground"></div>
+
     <div class="conContainer">
 
         <div class="conInfo">
-            <div class="conLogo">
-                <img src="images/logos/jspLogo.png" alt="">
-            </div>
 
             <div class="conAddress">
                 <p>987 Brook Street</p>
@@ -90,20 +73,40 @@
                 </div>
             </div>
 
-            <button id="btnContact" class="btn btn-success px-4 mt-4 shadow">Contact Me</button>
+            <button id="btnContact" class="btn btn-success px-4 mt-4 shadow">Contact Me</button><br>
+            <button id="btnMap" class="btn btn-light px-4 mt-4 shadow">Directions</button>
+
 
         </div>
+
+        <div></div>
+
+        <div class="conLogo">
+            <img src="images/logos/jspLogo.png" alt="">
+        </div>
+
+        
 
         <div class="conMap">
             <iframe src="https://www.google.com/maps/d/embed?mid=1BDNOfe6rqdud5ks5_w7U8Nmy-AcLCZN6&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
         </div>
-
-
-        <div class="conBackground">
-            <img src="images/contact/contact_background.jpg" alt="">
-        </div>
     </div>
 
+    <div class="conModalContainer">
+
+        <div class="conModalShadow"></div>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form action="https://formspree.io/f/xknypbjq" method="POST">
+            <label for="email">E-mail:</label>
+            <input type="email" name="email">
+
+            <label for="message">Message:</label>
+            <textarea name="message"></textarea>
+
+            <!-- your other form fields go here -->
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    </div>
 
     <script src="js/jQuery/jquery-3.5.1.min.js"></script>
     <script src="js/jQuery/jquery-ui-1.13.0.custom/jquery-ui.js"></script>
