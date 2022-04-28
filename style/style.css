@@ -343,6 +343,10 @@ footer {
 }
 
 /* ----------- TESTIMONIALS PAGE ----------- */
+.tesContainer {
+  overflow: hidden;
+}
+
 .tesText1,
 .tesText2,
 .tesText3 {
@@ -559,9 +563,11 @@ footer {
 
 .pacBackgroundContainer {
   position: absolute;
+  height: 100%;
   width: 100%;
   top: 0;
   z-index: 1;
+  overflow: hidden;
 }
 
 .pacBackground {
@@ -664,6 +670,8 @@ footer {
 .conBackground {
   position: absolute;
   z-index: -1;
+  width: 100%;
+  overflow: hidden;
 }
 
 form {
